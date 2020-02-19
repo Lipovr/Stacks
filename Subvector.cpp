@@ -79,8 +79,9 @@ int Subvector::pop_back()
         //cout << "top: " << top << "\n";
         top--;
         int d=data[top];
-        if (top<=capacity/2)
+        /*if (top<=capacity/2)
             shrink_to_fit();
+            */
         //cout << "top: " << top << "\n";
 
         return d;
