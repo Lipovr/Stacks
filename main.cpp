@@ -8,6 +8,8 @@ using namespace std;
 
 int main()
 {
+    cout << "***Stacks***\n\n";
+    cout << "Creating array of four stacks and fillig them with elements\n";
     Stack* stack_array[4];
     for (int i=0; i<4;i++)
     {
@@ -25,6 +27,7 @@ int main()
     {
         stack_array[i]->print();
     }
+    cout << "Poping back from each and displaying results:";
     for (int i=0; i<4;i++)
     {
         cout << stack_array[i]->pop_back()  << "\n";
