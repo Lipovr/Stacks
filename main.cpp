@@ -29,10 +29,13 @@ int main()
         stack_array[i]->print();
     }
     cout << "Poping back from each and displaying results:";
-    for (int i=0; i<4;i++)
+    for (int i=0; i<4; i++)
     {
         cout << stack_array[i]->pop_back()  << "\n";
     }
-    delete[] stack_array;
+    for (int i=0; i<4; i++) {
+        delete stack_array[i];
+        stack_array[i]=0;
+    }
     return 0;
 }
