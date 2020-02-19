@@ -35,9 +35,9 @@ void Subforwardlist::clear()
         head=0;
         last=0;
         size=0;
-        cout << "ishead, clearing\n";
+        //cout << "ishead, clearing\n";
     }
-    cout << "list is empty, nothing to clear\n";
+    cout << "ERROR: list is empty, nothing to clear\n";
 }
 
 
@@ -65,7 +65,7 @@ int Subforwardlist::pop_back()
 {
     if (!head)
     {
-        cout << "No elements to pop\n";
+        cout << "ERROR: No elements to pop\n";
         return 0;
     }
     int d=last->data;
@@ -112,7 +112,7 @@ int Subforwardlist::pop_forward()
 {
     if(!head)
     {
-        cout << "No elements to pop\n";
+        cout << "ERROR: No elements to pop\n";
         return 0;
     }
     int d=head->data;
@@ -154,7 +154,7 @@ void Subforwardlist::erase_where(unsigned int n)
 {
     if (!head)
     {
-        cout << "list is empty, nothing to delete";
+        cout << "ERROR: list is empty, nothing to delete";
         return;
     }
     if (n>=size-1)

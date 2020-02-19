@@ -35,7 +35,7 @@ void Subvector::resize(unsigned int newcapacity)
 
 Subvector::Subvector(): top(0), capacity(1), data(new int[1])
 {
-    cout << "Subvector::dtor\n";
+    cout << "Subvector::ctor\n";
 }
 /*
 Subvector::Subvector(unsigned int s): top(0), capacity(s), data(new int[s])
@@ -59,7 +59,8 @@ Subvector::~Subvector()
     {
         delete[] data;
     }
-    cout << "destructor\n";
+    cout << "Subvector::dtor\n";
+
 }
 
 void Subvector::push_back(int d)
@@ -86,7 +87,7 @@ int Subvector::pop_back()
 
         return d;
     }
-    cout << "No elements to pop";
+    cout << "ERROR: No elements to pop";
 
     return 0;
 }
